@@ -5,12 +5,116 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
+import React, { Fragment } from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import { createGlobalStyle } from "styled-components"
+import { ThemeProvider } from "styled-components"
+
+const theme = {
+  black: "#232323",
+  white: "#fafafa",
+  orange: "#f44336",
+}
+
+const GlobalStyle = createGlobalStyle`
+  *,
+  *::after,
+  *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing:inherit;
+
+    
+  /* Setting a valid hue (any unitless number) will auto-set all the other values */
+  --bg-hue: initial;
+  
+  /* Adjust the base saturation and lightness as desired */
+  --bg-saturation: 50%;
+  --bg-lightness: 40%;
+  
+  /* set angles for the tint and shade gradients */
+  --bg-tint-angle: -20deg;
+  --bg-shade-angle: -110deg;
+
+  /* set amounts for default tint & shade */
+  --bg-tint-amount: 20%;
+  --bg-shade-amount: 20%;
+  
+  /* set indiviidual hues for the tint and shade */
+  /* defaults are set by higher-level arguments…
+     which alows for both simpler & more customized uses*/
+  --bg-tint-hue: var(--bg-hue);
+  --bg-shade-hue: var(--bg-hue);
+  
+  /* set the gradient positions all at once */
+  --bg-gradient-stops: 30%;
+  
+  /* override tint/shade gradients directly */
+  --bg-tint-start: var(--bg-gradient-stops);
+  --bg-tint-end: var(--bg-tint-start);
+  --bg-shade-start: var(--bg-gradient-stops);
+  --bg-shade-end: var(--bg-shade-start);
+
+  /* override tint/shade saturation & lightness directly */
+  --bg-tint-saturation: var(--bg-saturation);
+  --bg-tint-lightness: calc(var(--bg-lightness) + var(--bg-tint-amount));
+  --bg-shade-saturation: var(--bg-saturation);
+  --bg-shade-lightness: calc(var(--bg-lightness) - var(--bg-shade-amount));
+
+  /* or override any individual color directly */
+  --bg-color: hsl(var(--bg-hue), var(--bg-saturation), var(--bg-lightness));
+  --bg-tint: hsla(var(--bg-tint-hue), var(--bg-tint-saturation), var(--bg-tint-lightness), 0.25);
+  --bg-shade: hsla(var(--bg-shade-hue), var(--bg-shade-saturation), var(--bg-shade-lightness), 0.25);
+
+  
+  /* this is the internal logic that creates your angled tint/shade background */
+  --bg-image: 
+    linear-gradient(
+      var(--bg-tint-angle),
+      var(--bg-tint) var(--bg-tint-start),
+      transparent var(--bg-tint-end)
+    ),
+    linear-gradient(
+      var(--bg-shade-angle),
+      var(--bg-shade) var(--bg-shade-start),
+      transparent var(--bg-shade-end)
+    )
+  ;
+  
+  /* Creating a final "output" variable acts like a function return */
+  --bg: var(--bg-image) var(--bg-color);
+  
+  /* Applying that value to a property creates a mixin */
+  /* Since the initial return is invalid, nothing happens unless we set a --bg-hue */
+  background: var(--bg);
+
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+  box-sizing: border-box;
+  font-family: 'Fira Sans', sans-serif;
+  color: ${props => props.theme.black};
+
+  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, p::selection, span::selection, div::selection{
+    color: ${props => props.theme.white};
+    background: ${props => props.theme.orange};
+
+  }
+   
+  h6::selection {
+    background: ${props => props.theme.orange};
+
+  }
+
+
+  }
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -24,24 +128,15 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 960,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
-        </div>
-      </>
+      <Fragment>
+        <ThemeProvider theme={theme}>
+          <Fragment>
+            <GlobalStyle />
+
+            <main>{children}</main>
+          </Fragment>
+        </ThemeProvider>
+      </Fragment>
     )}
   />
 )

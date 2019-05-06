@@ -4,6 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { Contact } from "../components/contact"
 
 import classyFabric from "../../assets/classy-fabric.png"
 
@@ -17,12 +18,14 @@ const Header = styled.div`
 
   h4 {
     font-weight: 300;
+    margin-left: 4rem;
   }
 
   h6 {
     font-size: 4rem;
     font-weight: 300;
     color: ${props => props.theme.white};
+    margin-left: 4rem;
   }
 `
 
@@ -33,6 +36,15 @@ const Body = styled.div`
   color: ${props => props.theme.white};
   font-size: 2rem;
   padding: 1rem 0 2rem 3rem;
+`
+
+const Box = styled.div`
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  height: 40rem;
+  width: 40rem;
+  background-color: red;
 `
 
 const IndexPage = () => (
@@ -46,6 +58,7 @@ const IndexPage = () => (
     <Body>
       <div>Hi der</div>
     </Body>
+    <Contact />
   </Layout>
 )
 

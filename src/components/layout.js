@@ -15,7 +15,7 @@ import { ThemeProvider } from "styled-components"
 const theme = {
   black: "#232323",
   white: "#fafafa",
-  orange: "#f44336",
+  red: "#f44336",
 }
 
 const GlobalStyle = createGlobalStyle`
@@ -101,16 +101,14 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Fira Sans', sans-serif;
   color: ${props => props.theme.black};
 
-  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, p::selection, span::selection, div::selection{
+  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, div::selection{
     color: ${props => props.theme.white};
-    background: ${props => props.theme.orange};
+    background: ${props => props.theme.red};
 
   }
    
-  h6::selection {
-    background: ${props => props.theme.orange};
 
-  }
+
 
 
   }
@@ -133,7 +131,7 @@ const Layout = ({ children }) => (
           <Fragment>
             <GlobalStyle />
 
-            <main>{children}</main>
+            <main style={{ positoin: "relative" }}>{children}</main>
           </Fragment>
         </ThemeProvider>
       </Fragment>

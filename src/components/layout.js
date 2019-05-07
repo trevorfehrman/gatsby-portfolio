@@ -97,6 +97,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
+  font-size: 1.3rem;
   box-sizing: border-box;
   font-family: 'Fira Sans', sans-serif;
   color: ${props => props.theme.black};

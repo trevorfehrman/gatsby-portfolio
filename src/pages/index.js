@@ -25,7 +25,7 @@ const Header = styled.div`
     font-size: 4rem;
     font-weight: 300;
     color: ${props => props.theme.white};
-    margin-left: 4rem;
+    margin-left: 4.2rem;
   }
 `
 
@@ -36,15 +36,6 @@ const Body = styled.div`
   color: ${props => props.theme.white};
   font-size: 2rem;
   padding: 1rem 0 2rem 3rem;
-`
-
-const Box = styled.div`
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  height: 40rem;
-  width: 40rem;
-  background-color: red;
 `
 
 const IndexPage = () => (

@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 
 export const Twitter = () => {
   return (
@@ -7,9 +8,9 @@ export const Twitter = () => {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
+      fill="#1da1f2"
+      stroke="#232323"
+      stroke-width="1"
       stroke-linecap="round"
       stroke-linejoin="round"
       class="feather feather-twitter"

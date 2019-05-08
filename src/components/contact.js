@@ -8,23 +8,23 @@ import { LinkedIn } from "../../assets/linkedin.js"
 const moveThenFade = keyframes`
     0%{
         opacity: 0;
-        transform: scaleY(0.7)  translateX(10rem);
+        transform: scaleY(0.8)  translateX(10rem);
     }
 
     80%{
         opacity: .8;
-        transform: scaleY(0.7) translateX(2rem);
+        transform: scaleY(0.8) translateX(2rem);
     }
 
     90% {
         opacity: .9;
-        transform: scaleY(0.7);
+        transform: scaleY(0.8);
     }
 
     100%{
         opacity: 1;
-        transform: scaleY(0.7) translateX(0)
-        t
+        transform: scaleY(0.8) translateX(0);
+       
     }
 `
 
@@ -58,7 +58,8 @@ const ContactBox = styled.div`
     /* transition: all 0.4s 0.4s ease-out; */
     opacity: 0;
     font-size: 3rem;
-    margin-left: 4rem;
+    margin-left: 2rem;
+    transition: all 0.4s ease-out;
 
     &:not(:first-child) {
       margin-top: 1rem;
@@ -77,11 +78,16 @@ const ContactBox = styled.div`
   }
   &:hover > .details {
     transform: scaleY(0.8) translateY(0);
+    margin-top: -1rem;
   }
 
   .twitter {
+    margin-left: 5rem;
     transform: translateY(1rem);
   }
+  /* &:hover > .twitter {
+    transform: translateY(-1.8rem) scaleY(0.8);
+  } */
 
   .linkedIn {
     transform: translateY(-1.5rem);

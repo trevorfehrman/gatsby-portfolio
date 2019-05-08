@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Contact } from "../components/contact"
+import { Work } from "../components/work"
 
 import classyFabric from "../../assets/classy-fabric.png"
 
@@ -47,7 +48,7 @@ const IndexPage = () => (
       <h6>Emphasis on Front End and Design</h6>
     </Header>
     <Body>
-      <div>Hi der</div>
+      <Work />
     </Body>
     <Contact />
   </Layout>

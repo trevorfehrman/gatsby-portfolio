@@ -8,22 +8,21 @@ import { LinkedIn } from "../../assets/linkedin.js"
 const moveThenFade = keyframes`
     0%{
         opacity: 0;
-        transform: scaleY(0.8)  translateX(10rem);
+        transform: translateX(10rem);
     }
 
     80%{
         opacity: .8;
-        transform: scaleY(0.8) translateX(2rem);
+        transform: translateX(2rem);
     }
 
     90% {
         opacity: .9;
-        transform: scaleY(0.8);
     }
 
     100%{
         opacity: 1;
-        transform: scaleY(0.8) translateX(0);
+        transform: translateX(0);
        
     }
 `
@@ -32,8 +31,9 @@ const ContactBox = styled.div`
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  height: 20rem;
-  width: 40rem;
+  /* height: 5rem; */
+  height: 25rem;
+  width: 7rem;
   background-color: ${props => props.theme.red};
   color: ${props => props.theme.white};
   font-size: 1.8rem;
@@ -42,6 +42,7 @@ const ContactBox = styled.div`
   border-top-right-radius: 7rem;
   transition: all 0.4s ease-out;
   padding-top: -1rem;
+  overflow: hidden;
 
   div::selection {
     background: yellow;
@@ -49,58 +50,44 @@ const ContactBox = styled.div`
   }
 
   &:hover {
-    transform: scaleY(1.2) translateX(-3px);
+    transform: translateX(-3px);
+    width: 40rem;
     transform-origin: bottom;
     box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
   }
 
   svg {
-    /* transition: all 0.4s 0.4s ease-out; */
-    opacity: 0;
     font-size: 3rem;
-    margin-left: 2rem;
-    transition: all 0.4s ease-out;
+    margin-left: .3rem;
 
     &:not(:first-child) {
       margin-top: 1rem;
     }
   }
-  &:hover > svg {
-    animation: ${moveThenFade} 0.2s ease-out;
-    opacity: 1;
-    transform: scaleY(0.8);
-  }
+ 
 
   .details {
+    /* opacity: 0; */
     margin-left: 7rem;
-    transition: all 0.4s ease-out;
+    /* transition: all 0.2s 0.3s ease-in; */
     user-select: all;
+    white-space: nowrap;
   }
   &:hover > .details {
-    transform: scaleY(0.8) translateY(0);
-    margin-top: -1rem;
+    /* opacity: 1; */
   }
 
-  .twitter {
-    margin-left: 5rem;
-    transform: translateY(1rem);
-  }
-  /* &:hover > .twitter {
-    transform: translateY(-1.8rem) scaleY(0.8);
-  } */
-
-  .linkedIn {
-    transform: translateY(-1.5rem);
-  }
-
-  .email {
-    transform: translateY(-4rem);
+  .contact {
+    margin-left: 7rem;
+    position: relative;
+   
   }
 `
 
 export const Contact = () => {
   return (
     <ContactBox>
+      <div className="contact">CONTACT</div>
       <Twitter />
       <div className="details twitter">@TrevorFehrman</div>
       <LinkedIn />

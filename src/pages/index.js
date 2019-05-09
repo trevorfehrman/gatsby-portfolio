@@ -36,7 +36,7 @@ const Body = styled.div`
   height: 100vh;
   color: ${props => props.theme.white};
   font-size: 2rem;
-  padding: 1rem 0 2rem 3rem;
+  /* padding: 1rem 0 2rem 3rem; */
 `
 
 const IndexPage = () => (

@@ -6,12 +6,13 @@ import up4Logo from "../../assets/up4Logo.png"
 
 const Card = styled.div`
   position: relative;
-  height: 30rem;
-  width: 50rem;
+  height: 100%;
+  width: 100%;
   margin-top: 7rem;
   &:hover {
-    border: 4px solid #81d6e3;
+    border: 6px solid #81d6e3;
     border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
   }
   & + .details {
     transform: scaleY(0);
@@ -36,7 +37,8 @@ const Card = styled.div`
     width: 30rem;
     background-color: #81d6e3;
     position: absolute;
-    left: 3rem;
+    left: 0rem;
+    margin-left: 3rem;
   }
 
   &:hover + .details2 {
@@ -51,12 +53,13 @@ const Card = styled.div`
     width: 30rem;
     background-color: #81d6e3;
     position: absolute;
-    right: 3rem;
+    right: 0rem;
   }
 
   &:hover + .details3 {
     transform: scaleY(1);
     width: 166vh;
+    margin-right: 3rem;
   }
 `
 
@@ -73,6 +76,7 @@ const StyledImage = styled.div`
   .logo {
     opacity: 1;
     transition: all 0.2s ease-in;
+    height: auto;
 
     &:hover {
       opacity: 0;
@@ -89,12 +93,22 @@ const StyledImage = styled.div`
     }
   }
 `
-const Details = styled.div``
+const Test = styled.div`
+  /* position: relative; */
+  width: 30%;
+  height: 30rem;
+`
 
 export const Work = () => {
   return (
-    <div style={{ display: "flex", justifyContent: "space-around" }}>
-      <div style={{ position: "relative" }}>
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "space-around",
+        position: "relative",
+      }}
+    >
+      <Test>
         <Card>
           <StyledImage>
             <img className="logo" src={up4Logo} />
@@ -104,8 +118,8 @@ export const Work = () => {
           </StyledImage>
         </Card>
         <div className="details">Hi Hi Hi hHI</div>
-      </div>
-      <div>
+      </Test>
+      <Test>
         <Card>
           <StyledImage>
             <img className="logo" src={up4Logo} />
@@ -115,8 +129,8 @@ export const Work = () => {
           </StyledImage>
         </Card>
         <div className="details2">Hi Hi Hi hHI</div>
-      </div>
-      <div>
+      </Test>
+      <Test>
         <Card>
           <StyledImage>
             <img className="logo" src={up4Logo} />
@@ -126,7 +140,7 @@ export const Work = () => {
           </StyledImage>
         </Card>
         <div className="details3">Hi Hi Hi hHI</div>
-      </div>
+      </Test>
     </div>
   )
 }

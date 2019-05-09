@@ -31,9 +31,9 @@ const Header = styled.div`
 `
 
 const Body = styled.div`
+  height: 100vh;
   background-color: ${props => props.theme.black};
   background-image: url(${classyFabric});
-  height: 100vh;
   color: ${props => props.theme.white};
   font-size: 2rem;
   /* padding: 1rem 0 2rem 3rem; */

@@ -18,7 +18,7 @@ const Card = styled.div`
     transform: scaleY(0);
     transition: transform 0.2s ease-in, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
     transform-origin: top;
-    height: 30rem;
+    height: 60rem;
     width: 30rem;
     background-color: #81d6e3;
     position: absolute;
@@ -32,7 +32,7 @@ const Card = styled.div`
     transform: scaleY(0);
     transition: transform 0.2s ease-in, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
     transform-origin: center;
-    height: 30rem;
+    height: 60rem;
     width: 30rem;
     background-color: #81d6e3;
     position: absolute;
@@ -49,7 +49,7 @@ const Card = styled.div`
     transform: scaleY(0);
     transition: transform 0.2s ease-in, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
     transform-origin: top;
-    height: 30rem;
+    height: 60rem;
     width: 30rem;
     background-color: #81d6e3;
     position: absolute;

@@ -36,7 +36,7 @@ const Header = styled.div`
 `
 
 const Body = styled.div`
-  height: 100vh;
+  min-height: 200vh;
   background-color: ${props => props.theme.black};
   background-image: url(${classyFabric});
   color: ${props => props.theme.white};

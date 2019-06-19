@@ -1,9 +1,9 @@
-import React from "react"
-import styled, { keyframes } from "styled-components"
+import React from "react";
+import styled, {keyframes} from "styled-components";
 
-import { Twitter } from "../../assets/twitter.js"
-import { Send } from "../../assets/send.js"
-import { LinkedIn } from "../../assets/linkedin.js"
+import {Twitter} from "../../assets/twitter.js";
+import {Send} from "../../assets/send.js";
+import {LinkedIn} from "../../assets/linkedin.js";
 
 const ContactBox = styled.div`
   position: fixed;
@@ -20,10 +20,16 @@ const ContactBox = styled.div`
   transition: width 0.4s ease-out, box-shadow .2s ease-out .4s, transform .2s ease-out .4s;
   padding-top: -1rem;
   overflow: hidden;
+  display: flex;
 
   div::selection {
     background: yellow;
     color: ${props => props.theme.white};
+  }
+  .icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
   }
 
   &:hover {
@@ -32,46 +38,54 @@ const ContactBox = styled.div`
     transform-origin: bottom;
     box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
   }
-
-  &:hover > .details {
-    opacity: 1;
+  .details {
+    margin-left: 2rem;
+    user-select: all;
+    white-space: nowrap;
+    transition: all 0.2s ease-in;
+    
   }
+
+  /* &:hover > .details {
+    display: flex;
+  } */
 
   svg {
     font-size: 3rem;
     margin-left: 0.3rem;
-
+    display: block;
     &:not(:first-child) {
       margin-top: 1rem;
     }
   }
 
-  .details {
-    margin-left: 7rem;
-    user-select: all;
-    white-space: nowrap;
-    transition: all 0.2s ease-in;
-    opacity: 0;
-  }
-
+  
   .contact {
     margin-left: 7rem;
     position: relative;
 
     font-weight: 300;
   }
-`
+`;
 
 export const Contact = () => {
   return (
     <ContactBox>
-      <div className="contact details">CONTACT</div>
-      <Twitter />
-      <div className="details">@TrevorFehrman</div>
-      <LinkedIn />
-      <div className="details">Trevor Fehrman</div>
-      <Send />
-      <div className="details">trevorfehrman@gmail.com</div>
+      <div className="icons">
+        <Twitter />
+        <LinkedIn />
+        <Send />
+      </div>
+      <div className="details" style={{display: 'flex', flexDirection: 'column'}}>
+        <div className='contact details'>CONTACT</div>
+        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flexGrow: 1, maxHeight: '153px'}}>
+        <div className='details'>@TrevorFehrman</div>
+
+        <div className='details'>Trevor Fehrman</div>
+
+        <div className='details'>trevorfehrman@gmail.com</div>
+        </div>
+      </div>
     </ContactBox>
-  )
-}
+  );
+};

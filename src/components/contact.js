@@ -53,29 +53,23 @@ const ContactBox = styled.div`
     user-select: all;
     white-space: nowrap;
     transition: all 0.2s ease-in;
+  }
 
-
-   // .details--expanded {
+   /* // .details--expanded {
    //   display: flex;
    //   flex-direction: column;
    //   justify-content: space-between;
     //  flex-grow: 1;
    //   max-height: 153px;
    //   margin-top: 2.7rem;
-   // }
+   // } */
 
-  }
   .handle {
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
     color: ${props => props.theme.white};
   }
-  /* &:hover > .details {
-    display: flex;
-  } */
-
-
   .contact {
     display: flex;
     flex-direction: column;
@@ -88,8 +82,6 @@ export const Contact = () => {
     <ContactBox>
 
       <div className='icons'>
-
-
         <Twitter />
         <LinkedIn />
         <Send />

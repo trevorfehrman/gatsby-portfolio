@@ -18,8 +18,8 @@ const ContactBox = styled.div`
   padding: 3.5rem 2rem;
   border-bottom-left-radius: 7rem;
   border-top-right-radius: 7rem;
-  transition: width 0.4s ease-out, box-shadow 0.2s ease-out 0.4s,
-    transform 0.2s ease-out 0.4s;
+  transition: width 0.4s ease-out, box-shadow .2s ease-out .4s,
+    transform .2s ease-out .4s;
   padding-top: -1rem;
   overflow: hidden;
   display: flex;
@@ -53,35 +53,23 @@ const ContactBox = styled.div`
     user-select: all;
     white-space: nowrap;
     transition: all 0.2s ease-in;
-
-    .details--expanded {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex-grow: 1;
-      max-height: 153px;
-      margin-top: 2.7rem;
-    }
   }
+
+   /* // .details--expanded {
+   //   display: flex;
+   //   flex-direction: column;
+   //   justify-content: space-between;
+    //  flex-grow: 1;
+   //   max-height: 153px;
+   //   margin-top: 2.7rem;
+   // } */
+
   .handle {
     font-size: 16px;
     cursor: pointer;
     text-decoration: none;
     color: ${props => props.theme.white};
   }
-  /* &:hover > .details {
-    display: flex;
-  } */
-
-  svg {
-    font-size: 3rem;
-    margin-left: 0.3rem;
-    display: block;
-    &:not(:first-child) {
-      margin-top: 1rem;
-    }
-  }
-
   .contact {
     display: flex;
     flex-direction: column;
@@ -92,6 +80,7 @@ const ContactBox = styled.div`
 export const Contact = () => {
   return (
     <ContactBox>
+
       <div className='icons'>
         <Twitter />
         <LinkedIn />

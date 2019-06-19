@@ -1,9 +1,9 @@
-import React from "react"
-import styled, { keyframes } from "styled-components"
+import React from "react";
+import styled, {keyframes} from "styled-components";
 
-import { Twitter } from "../../assets/twitter.js"
-import { Send } from "../../assets/send.js"
-import { LinkedIn } from "../../assets/linkedin.js"
+import {Twitter} from "../../assets/twitter.js";
+import {Send} from "../../assets/send.js";
+import {LinkedIn} from "../../assets/linkedin.js";
 
 const ContactBox = styled.div`
   position: fixed;
@@ -55,7 +55,7 @@ const ContactBox = styled.div`
     transition: all 0.2s ease-in;
   }
 
-   /* // .details--expanded {
+  /* // .details--expanded {
    //   display: flex;
    //   flex-direction: column;
    //   justify-content: space-between;
@@ -75,42 +75,39 @@ const ContactBox = styled.div`
     flex-direction: column;
     justify-content: space-between;
   }
-`
+`;
 
 export const Contact = () => {
   return (
     <ContactBox>
-
       <div className='icons'>
         <Twitter />
         <LinkedIn />
         <Send />
       </div>
       <div className='contact details'>
-       
-          <a
-            className='details handle'
-            href='https://twitter.com/TrevorFehrman'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            @TrevorFehrman
-          </a>
+        <a
+          className='details handle'
+          href='https://twitter.com/TrevorFehrman'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          @TrevorFehrman
+        </a>
 
-          <a
-            className='details handle'
-            href='https://www.linkedin.com/in/trevor-fehrman-0042656/'
-            target='_blank'
-            rel='noopener noreferrer'
-          >
-            Trevor Fehrman
-          </a>
+        <a
+          className='details handle'
+          href='https://www.linkedin.com/in/trevor-fehrman-0042656/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          Trevor Fehrman
+        </a>
 
-          <a className='details handle' href='mailto:trevorfehrman@gmail.com'>
-            trevorfehrman@gmail.com
-          </a>
-        </div>
-    
+        <a className='details handle' href='mailto:trevorfehrman@gmail.com'>
+          trevorfehrman@gmail.com
+        </a>
+      </div>
     </ContactBox>
-  )
-}
+  );
+};

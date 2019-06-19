@@ -1,9 +1,9 @@
-import React from "react";
-import styled, {keyframes} from "styled-components";
+import React from "react"
+import styled, { keyframes } from "styled-components"
 
-import {Twitter} from "../../assets/twitter.js";
-import {Send} from "../../assets/send.js";
-import {LinkedIn} from "../../assets/linkedin.js";
+import { Twitter } from "../../assets/twitter.js"
+import { Send } from "../../assets/send.js"
+import { LinkedIn } from "../../assets/linkedin.js"
 
 const ContactBox = styled.div`
   position: fixed;
@@ -18,8 +18,8 @@ const ContactBox = styled.div`
   padding: 3.5rem 2rem;
   border-bottom-left-radius: 7rem;
   border-top-right-radius: 7rem;
-  transition: width 0.4s ease-out, box-shadow .2s ease-out .4s,
-    transform .2s ease-out .4s;
+  transition: width 0.4s ease-out, box-shadow 0.2s ease-out 0.4s,
+    transform 0.2s ease-out 0.4s;
   padding-top: -1rem;
   overflow: hidden;
   display: flex;
@@ -53,6 +53,15 @@ const ContactBox = styled.div`
     user-select: all;
     white-space: nowrap;
     transition: all 0.2s ease-in;
+
+    .details--expanded {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      max-height: 153px;
+      margin-top: 2.7rem;
+    }
   }
   .handle {
     font-size: 16px;
@@ -64,12 +73,21 @@ const ContactBox = styled.div`
     display: flex;
   } */
 
+  svg {
+    font-size: 3rem;
+    margin-left: 0.3rem;
+    display: block;
+    &:not(:first-child) {
+      margin-top: 1rem;
+    }
+  }
+
   .contact {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
-`;
+`
 
 export const Contact = () => {
   return (
@@ -105,5 +123,5 @@ export const Contact = () => {
         </div>
     
     </ContactBox>
-  );
-};
+  )
+}

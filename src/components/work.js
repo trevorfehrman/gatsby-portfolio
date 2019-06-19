@@ -26,9 +26,8 @@ const Card = styled.div`
 
   &:hover + .details {
     transform: scaleY(1);
-    width: 166vh;
+    width: 95%;
   }
-
   & + .details2 {
     transform: scaleY(0);
     transition: transform 0.2s ease-in, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
@@ -43,8 +42,9 @@ const Card = styled.div`
 
   &:hover + .details2 {
     transform: scaleY(1);
-    width: 166vh;
+    width: 95%;
   }
+
   & + .details3 {
     transform: scaleY(0);
     transition: transform 0.2s ease-in, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
@@ -53,13 +53,12 @@ const Card = styled.div`
     width: 30rem;
     background-color: #81d6e3;
     position: absolute;
-    right: 0rem;
+    right: 1.7%;
   }
 
   &:hover + .details3 {
     transform: scaleY(1);
-    width: 166vh;
-    margin-right: 3rem;
+    width: 95%;
   }
 `
 
@@ -74,6 +73,7 @@ const StyledImage = styled.div`
   }
 
   .logo {
+    transform: translateY(-1rem);
     opacity: 1;
     transition: all 0.2s ease-in;
     height: auto;
@@ -93,10 +93,27 @@ const StyledImage = styled.div`
     }
   }
 `
-const Test = styled.div`
-  /* position: relative; */
+const Container = styled.div`
   width: 30%;
   height: 30rem;
+  .details {
+    &:hover {
+      transform: scaleY(1);
+      width: 95%;
+    }
+  }
+  .details2 {
+    &:hover {
+      transform: scaleY(1);
+      width: 95%;
+    }
+  }
+  .details3 {
+    &:hover {
+      transform: scaleY(1);
+      width: 95%;
+    }
+  }
 `
 
 export const Work = () => {
@@ -106,9 +123,11 @@ export const Work = () => {
         display: "flex",
         justifyContent: "space-around",
         position: "relative",
+        width: "85%",
+        margin: "0 auto",
       }}
     >
-      <Test>
+      <Container>
         <Card>
           <StyledImage>
             <img className="logo" src={up4Logo} />
@@ -118,8 +137,8 @@ export const Work = () => {
           </StyledImage>
         </Card>
         <div className="details">Hi Hi Hi hHI</div>
-      </Test>
-      <Test>
+      </Container>
+      <Container>
         <Card>
           <StyledImage>
             <img className="logo" src={up4Logo} />
@@ -129,8 +148,8 @@ export const Work = () => {
           </StyledImage>
         </Card>
         <div className="details2">Hi Hi Hi hHI</div>
-      </Test>
-      <Test>
+      </Container>
+      <Container>
         <Card>
           <StyledImage>
             <img className="logo" src={up4Logo} />
@@ -140,7 +159,7 @@ export const Work = () => {
           </StyledImage>
         </Card>
         <div className="details3">Hi Hi Hi hHI</div>
-      </Test>
+      </Container>
     </div>
   )
 }

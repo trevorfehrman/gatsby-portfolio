@@ -17,7 +17,7 @@ const ContactBox = styled.div`
   padding: 2rem;
   border-bottom-left-radius: 7rem;
   border-top-right-radius: 7rem;
-  transition: all 0.4s ease-out;
+  transition: width 0.4s ease-out, box-shadow .2s ease-out .4s, transform .2s ease-out .4s;
   padding-top: -1rem;
   overflow: hidden;
 

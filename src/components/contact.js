@@ -22,6 +22,8 @@ const ContactBox = styled.div`
   padding-top: -1rem;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
+
 
   div::selection {
     background: yellow;
@@ -30,17 +32,17 @@ const ContactBox = styled.div`
   .icons {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 
   &:hover {
     transform: translateX(-3px);
-    width: 40rem;
+    width: 33rem;
     transform-origin: bottom;
     box-shadow: 1px 1px #53a7ea, 2px 2px #53a7ea, 3px 3px #53a7ea;
   }
   .details {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     user-select: all;
     white-space: nowrap;
     transition: all 0.2s ease-in;
@@ -54,7 +56,9 @@ const ContactBox = styled.div`
       margin-top: 2.7rem;
     }
   }
-
+  .handle {
+    font-size: 16px;
+  }
   /* &:hover > .details {
     display: flex;
   } */
@@ -79,6 +83,7 @@ const ContactBox = styled.div`
 export const Contact = () => {
   return (
     <ContactBox>
+    <div style={{display: 'flex', flexGrow: 1, margin: '10px 0 25px'}}>
       <div className="icons">
         <Twitter />
         <LinkedIn />
@@ -95,6 +100,7 @@ export const Contact = () => {
 
           <div className="details">trevorfehrman@gmail.com</div>
         </div>
+      </div>
       </div>
     </ContactBox>
   )

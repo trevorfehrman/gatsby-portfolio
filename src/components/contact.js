@@ -1,9 +1,9 @@
-import React from "react";
-import styled, {keyframes} from "styled-components";
+import React from "react"
+import styled, { keyframes } from "styled-components"
 
-import {Twitter} from "../../assets/twitter.js";
-import {Send} from "../../assets/send.js";
-import {LinkedIn} from "../../assets/linkedin.js";
+import { Twitter } from "../../assets/twitter.js"
+import { Send } from "../../assets/send.js"
+import { LinkedIn } from "../../assets/linkedin.js"
 
 const ContactBox = styled.div`
   position: fixed;
@@ -17,7 +17,8 @@ const ContactBox = styled.div`
   padding: 2rem;
   border-bottom-left-radius: 7rem;
   border-top-right-radius: 7rem;
-  transition: width 0.4s ease-out, box-shadow .2s ease-out .4s, transform .2s ease-out .4s;
+  transition: width 0.4s ease-out, box-shadow 0.2s ease-out 0.4s,
+    transform 0.2s ease-out 0.4s;
   padding-top: -1rem;
   overflow: hidden;
   display: flex;
@@ -43,7 +44,15 @@ const ContactBox = styled.div`
     user-select: all;
     white-space: nowrap;
     transition: all 0.2s ease-in;
-    
+
+    .details--expanded {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+      max-height: 153px;
+      margin-top: 2.7rem;
+    }
   }
 
   /* &:hover > .details {
@@ -59,14 +68,13 @@ const ContactBox = styled.div`
     }
   }
 
-  
   .contact {
     margin-left: 7rem;
     position: relative;
 
     font-weight: 300;
   }
-`;
+`
 
 export const Contact = () => {
   return (
@@ -76,16 +84,18 @@ export const Contact = () => {
         <LinkedIn />
         <Send />
       </div>
-      <div className="details" style={{display: 'flex', flexDirection: 'column'}}>
-        <div className='contact details'>CONTACT</div>
-        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flexGrow: 1, maxHeight: '153px'}}>
-        <div className='details'>@TrevorFehrman</div>
+      <div
+        className="details"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <div className="details--expanded">
+          <div className="details">@TrevorFehrman</div>
 
-        <div className='details'>Trevor Fehrman</div>
+          <div className="details">Trevor Fehrman</div>
 
-        <div className='details'>trevorfehrman@gmail.com</div>
+          <div className="details">trevorfehrman@gmail.com</div>
         </div>
       </div>
     </ContactBox>
-  );
-};
+  )
+}

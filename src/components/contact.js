@@ -89,16 +89,14 @@ export const Contact = () => {
         <LinkedIn />
         <Send />
       </div>
-      <div
-        className="details"
-        style={{ display: "flex", flexDirection: "column" }}
-      >
-        <div className="details--expanded">
-          <div className="details">@TrevorFehrman</div>
+      <div style={{display: 'flex', flexDirection: 'column'}}>
+        
+        <div className="details" style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flexGrow: 1}}>
+        <div className='details handle'>@TrevorFehrman</div>
 
-          <div className="details">Trevor Fehrman</div>
+        <div className='details handle'>Trevor Fehrman</div>
 
-          <div className="details">trevorfehrman@gmail.com</div>
+        <div className='details handle'>trevorfehrman@gmail.com</div>
         </div>
       </div>
       </div>

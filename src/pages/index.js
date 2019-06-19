@@ -17,9 +17,14 @@ const Header = styled.div`
   font-size: 7rem;
   padding: 1rem 0 2rem 3rem;
 
+  h1{
+    /* text-shadow: 0.03em -0.04em #ed65e8, -0.03em 0.04em #f9f32f; */
+  }
+
   h4 {
     font-weight: 300;
     margin-left: 4rem;
+
   }
 
   h6 {

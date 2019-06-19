@@ -19,6 +19,8 @@ const theme = {
 }
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css?family=FiraSans');
+
 
 @font-face {
   font-family: 'Fira Sans';

@@ -97,9 +97,15 @@ const Container = styled.div`
   width: 30%;
   height: 30rem;
   .details {
+    display: flex;
     &:hover {
       transform: scaleY(1);
       width: 95%;
+    }
+
+    .stack {
+      background-color: white;
+      color: #81d6e3;
     }
   }
   .details2 {
@@ -136,7 +142,11 @@ export const Work = () => {
             <img className="image" src={up4Gif} />
           </StyledImage>
         </Card>
-        <div className="details">Hi Hi Hi hHI</div>
+        <div className="details">
+          <div className="stack">HI</div>
+          <div className="description">HI</div>
+          <div className="contribution">HI</div>
+        </div>
       </Container>
       <Container>
         <Card>

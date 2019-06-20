@@ -1,51 +1,64 @@
-import React, { Fragment } from "react"
-import up4Splash from "../../assets/up4Splash.png"
+import React, { Fragment, useState } from "react"
+import quizBakerSplash from "../../assets/quizBaker.png"
 
-const QuizBaker = ({ up4Content, setUp4Content }) => {
+const QuizBaker = () => {
+  const [quizBakerContent, setQuizBakerContent] = useState("Picture")
   return (
     <div className="details2">
       <div className="nav">
         <ul>
           <li
-            className={up4Content == "Picture" ? "selected--text" : null}
-            onClick={() => setUp4Content("Picture")}
+            className={quizBakerContent == "Picture" ? "selected--text" : null}
+            onClick={() => setQuizBakerContent("Picture")}
           >
-            <span>&#9776;</span> Up4
-            <div
-              className={up4Content == "Picture" ? "selected" : "highlight"}
-            />
-          </li>
-          <li
-            className={up4Content == "What" ? "selected--text" : null}
-            onClick={() => setUp4Content("What")}
-          >
-            <span>&#9777;</span> What is it?
-            <div className={up4Content == "What" ? "selected" : "highlight"} />
-          </li>
-          <li
-            className={up4Content == "Stack" ? "selected--text" : null}
-            onClick={() => setUp4Content("Stack")}
-          >
-            <span>&#9778;</span> Stack
-            <div className={up4Content == "Stack" ? "selected" : "highlight"} />
-          </li>
-          <li
-            className={up4Content == "Challenges" ? "selected--text" : null}
-            onClick={() => setUp4Content("Challenges")}
-          >
-            <span>&#9779;</span> Challenges
-            <div
-              className={up4Content == "Challenges" ? "selected" : "highlight"}
-            />
-          </li>
-          <li
-            className={up4Content == "Contribution" ? "selected--text" : null}
-            onClick={() => setUp4Content("Contribution")}
-          >
-            <span>&#9780;</span> Contribution
+            <span>&#9834;</span> Quiz-Baker
             <div
               className={
-                up4Content == "Contribution" ? "selected" : "highlight"
+                quizBakerContent == "Picture" ? "selected" : "highlight"
+              }
+            />
+          </li>
+          <li
+            className={quizBakerContent == "What" ? "selected--text" : null}
+            onClick={() => setQuizBakerContent("What")}
+          >
+            <span>&#9836;</span> What is it?
+            <div
+              className={quizBakerContent == "What" ? "selected" : "highlight"}
+            />
+          </li>
+          <li
+            className={quizBakerContent == "Stack" ? "selected--text" : null}
+            onClick={() => setQuizBakerContent("Stack")}
+          >
+            <span>&#9837;</span> Stack
+            <div
+              className={quizBakerContent == "Stack" ? "selected" : "highlight"}
+            />
+          </li>
+          <li
+            className={
+              quizBakerContent == "Challenges" ? "selected--text" : null
+            }
+            onClick={() => setQuizBakerContent("Challenges")}
+          >
+            <span>&#9838;</span> Challenges
+            <div
+              className={
+                quizBakerContent == "Challenges" ? "selected" : "highlight"
+              }
+            />
+          </li>
+          <li
+            className={
+              quizBakerContent == "Contribution" ? "selected--text" : null
+            }
+            onClick={() => setQuizBakerContent("Contribution")}
+          >
+            <span>&#9839;</span> Contribution
+            <div
+              className={
+                quizBakerContent == "Contribution" ? "selected" : "highlight"
               }
             />
           </li>
@@ -54,12 +67,11 @@ const QuizBaker = ({ up4Content, setUp4Content }) => {
       <div className="content">
         <Fragment>
           {(() => {
-            console.log(up4Content)
-            switch (up4Content) {
+            switch (quizBakerContent) {
               case "Picture":
                 return (
                   <Fragment>
-                    <img src={up4Splash} />
+                    <img src={quizBakerSplash} />
                   </Fragment>
                 )
               case "What":
@@ -67,19 +79,21 @@ const QuizBaker = ({ up4Content, setUp4Content }) => {
                   <Fragment>
                     <h2>The Project</h2>
                     <p>
-                      Up4 is a social media app that connects you with users who
-                      are interested in going to the same events as you so long
-                      as you match each other's criteria.
+                      I built Quiz-Baker with with a partner while we were
+                      teacher's assistants in Lambda School. We wanted to
+                      provide an API on top of which the students we were
+                      overseeing could build a practice project over an extended
+                      winter break.
                     </p>
                     <p>
-                      I and four other developers spent 5 weeks building Up4 to
-                      demonstrate the knowledge we'd accrued at Lambda School.
-                      Features include a compatibility algorithm a user
-                      dashboard, and a chat system built from scratch.
+                      Our goal was to make a CRUD application that was a bit
+                      more complex than the ones we had been working with up and
+                      to that point.
                     </p>
                     <p>
-                      Despite the rigid timeframe we opted into a stack we
-                      weren't trained in and managed to hit a 35 day MVP in 10.
+                      Quiz-Baker lets users create custome quizes with which
+                      they can compete. It features leaderboards, a forum and
+                      robust filtering options.
                     </p>
                   </Fragment>
                 )
@@ -87,12 +101,12 @@ const QuizBaker = ({ up4Content, setUp4Content }) => {
                 return (
                   <Fragment>
                     <h2>Technologies</h2>
-                    <p>Material UI</p>
-                    <p>NextJS / React 16.8</p>
-                    <p>Apollo Client</p>
-                    <p>Prisma / GraphQL</p>
+                    <p>Prime React</p>
+                    <p>Styled Components</p>
+                    <p>React 16.8</p>
+                    <p>Express</p>
+                    <p>Node</p>
                     <p>PostgreSQL</p>
-                    <p>Docker</p>
                   </Fragment>
                 )
               case "Challenges":
@@ -100,25 +114,23 @@ const QuizBaker = ({ up4Content, setUp4Content }) => {
                   <Fragment>
                     <h2>What we Struggled with</h2>
                     <p>
-                      Every Layer of our stack was new to us in one way or
-                      another. We had to teach ourselves server-side rendering,
-                      GraphQL and Material UI while we were implementing them
-                      for the first time.
+                      This was the first time either my partner or I had worked
+                      extensively with another programmer. Getting past the
+                      growing pains of reading and interacting with someone
+                      else's code was a crucial step in our development.
                     </p>
                     <p>
-                      Because our project was so ambitious we ran into several
-                      performace issues. We migrated our backend twice to more
-                      powerful options. We also isolated some extremely hot code
-                      and brought our time-to-interactive down to a fraction of
-                      what it was prior.
+                      This was also the largest project either of us had worked
+                      on up to that point. We would hit massive bottlenecks in
+                      which simple changes proved difficult to implement.
                     </p>
 
                     <p>
-                      The biggest challenge was fixing an arcane header issue
-                      during deployment. It was forcing the client to handle the
-                      initial render which meant we weren't reaping the
-                      performance benefits of server-side rendering. It took us
-                      weeks to find the problem but we did it.
+                      The code was overhauled three times. Each time was an
+                      improvement. I look back on this project as the most
+                      valuable educational experience I had this year. We
+                      learned how to avoid a lot of problems before they began.
+                      We perservered and ended up with a project we're proud of.
                     </p>
                   </Fragment>
                 )
@@ -127,20 +139,18 @@ const QuizBaker = ({ up4Content, setUp4Content }) => {
                   <Fragment>
                     <h2>My Role</h2>
                     <p>
-                      The fundamental concept and scope of the app was mine. We
-                      were tasked to build an app that pulled event data down
-                      from an API but I pitched a more ambitious target to my
-                      team.
+                      I helped architect the back end but wrote very little of
+                      it. I came on the project in earnest after the API was
+                      largely finished.
                     </p>
                     <p>
-                      Up4 was a collabrative effort but we each had our niches.
-                      The lion's share of the look and feel of the site is the
-                      result of my work. I also named it.
+                      As in Up4 I gave Quiz-Baker its look at feel. I came up
+                      with the name, the color scheme, the design motifs and the
+                      overall design of most of the custom components.
                     </p>
                     <p>
-                      In practice what this means is my team would figure out
-                      how to feed the data up to the front end at which point I
-                      would figure out what to do with it.
+                      It's named in honor of our lovely friend and colleague,
+                      Liz Baker.
                     </p>
                   </Fragment>
                 )

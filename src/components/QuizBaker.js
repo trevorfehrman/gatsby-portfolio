@@ -81,9 +81,9 @@ const QuizBaker = () => {
                     <p>
                       I built Quiz-Baker with with a partner while we were
                       teacher's assistants in Lambda School. We wanted to
-                      provide an API on top of which the students we were
-                      overseeing could build a practice project over an extended
-                      winter break.
+                      provide an API on top of which the more ambitious students
+                      we were overseeing could build a practice project over an
+                      extended winter break.
                     </p>
                     <p>
                       Our goal was to make a CRUD application that was a bit
@@ -91,9 +91,9 @@ const QuizBaker = () => {
                       to that point.
                     </p>
                     <p>
-                      Quiz-Baker lets users create custome quizes with which
-                      they can compete. It features leaderboards, a forum and
-                      robust filtering options.
+                      Quiz-Baker lets users create custom quizes over which they
+                      can compete. It features leaderboards, a forum and robust
+                      filtering options among several other bells and whistles.
                     </p>
                   </Fragment>
                 )
@@ -102,6 +102,7 @@ const QuizBaker = () => {
                   <Fragment>
                     <h2>Technologies</h2>
                     <p>Prime React</p>
+                    <p>AnimeJS</p>
                     <p>Styled Components</p>
                     <p>React 16.8</p>
                     <p>Express</p>

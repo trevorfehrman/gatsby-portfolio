@@ -138,7 +138,7 @@ const Up4 = ({ setUp4Content, up4Content }) => {
                       result of my work. I also named it.
                     </p>
                     <p>
-                      In practice what this means is my team would figure out
+                      Very roughtly speaking what this means is my team would figure out
                       how to feed the data up to the front end at which point I
                       would figure out what to do with it.
                     </p>

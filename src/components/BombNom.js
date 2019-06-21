@@ -1,7 +1,6 @@
 import React, { Fragment, useState } from "react"
 import bombNomSplash from "../../assets/bombNomSplash.png"
 
-
 const BombNom = () => {
   const [bombNomContent, setBombNomContent] = useState("Picture")
   return (
@@ -84,10 +83,11 @@ const BombNom = () => {
                       host needs their guests to bring.
                     </p>
                     <p>
-                      Have spent a lot of the last year collaborating I felt I
-                      needed to demonstrate I could build a full stack
-                      application by myself. I also wanted the app to useful so
-                      I came up with something my friends could use.
+                      Having spent a lot of the last year collaborating with
+                      others I felt I needed to demonstrate that I could still
+                      build a full stack application by myself. I also wanted
+                      the app to be useful so I came up with something I hoped
+                      my friends might like.
                     </p>
                   </Fragment>
                 )
@@ -116,7 +116,7 @@ const BombNom = () => {
                       Grid is very powerful but the skill floor is higher than
                       alternatives. You can get very responsive layouts with a
                       single line of CSS, but that line has a lot to unpack.
-                      Masking the party attendee grid also took considerable
+                      Masking the party attendee grid took considerable
                       effort.
                     </p>
 

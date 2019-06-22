@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Contact } from "../components/contact"
 import { Work } from "../components/work"
+import Timeline from "../components/Timeline"
 
 import classyFabric from "../../assets/classy-fabric.png"
 
@@ -17,14 +18,13 @@ const Header = styled.div`
   font-size: 7rem;
   padding: 1rem 0 2rem 3rem;
 
-  h1{
+  h1 {
     /* text-shadow: 0.03em -0.04em #ed65e8, -0.03em 0.04em #f9f32f; */
   }
 
   h4 {
     font-weight: 300;
     margin-left: 4rem;
-
   }
 
   h6 {
@@ -44,6 +44,25 @@ const Body = styled.div`
   /* padding: 1rem 0 2rem 3rem; */
 `
 
+const Spacer = styled.div`
+  background-color: #29292959;
+  height: 60rem;
+  width: 70%;
+  margin: 7rem auto 0 auto;
+  color: transparent;
+  text-shadow: 0 0 0 #313131;
+  font-size: 10rem;
+  text-align: center;
+  display: flex;
+  place-content: center;
+  place-items: center;
+
+  span::selection {
+    color: ${props => props.theme.white};
+    background: ${props => props.theme.red};
+  }
+`
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -54,6 +73,10 @@ const IndexPage = () => (
     </Header>
     <Body>
       <Work />
+      <Spacer>
+        <span>( •_•)>⌐■-■ (⌐■_■)</span>
+      </Spacer>
+      <Timeline />
     </Body>
     <Contact />
   </Layout>

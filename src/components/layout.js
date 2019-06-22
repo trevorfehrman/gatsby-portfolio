@@ -114,7 +114,7 @@ const GlobalStyle = createGlobalStyle`
   font-family: 'Fira Sans', sans-serif;
   color: ${props => props.theme.black};
 
-  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, div::selection{
+  h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, div::selection, span::selection {
     color: ${props => props.theme.white};
     background: ${props => props.theme.red};
 

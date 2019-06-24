@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import { Contact } from "../components/contact"
 import { Work } from "../components/work"
 import Timeline from "../components/Timeline"
-
+import Skills from "../components/Skills"
 import classyFabric from "../../assets/classy-fabric.png"
 
 const Header = styled.div`
@@ -36,7 +36,7 @@ const Header = styled.div`
 `
 
 const Body = styled.div`
-  min-height: 200vh;
+  /* min-height: 200vh; */
   background-color: ${props => props.theme.black};
   background-image: url(${classyFabric});
   color: ${props => props.theme.white};
@@ -56,6 +56,19 @@ const Spacer = styled.div`
   display: flex;
   place-content: center;
   place-items: center;
+
+  --notchSize: 4rem;
+
+  clip-path: polygon(
+    0% var(--notchSize),
+    var(--notchSize) 0%,
+    calc(100% - var(--notchSize)) 0%,
+    100% var(--notchSize),
+    100% calc(100% - var(--notchSize)),
+    calc(100% - var(--notchSize)) 100%,
+    var(--notchSize) 100%,
+    0% calc(100% - var(--notchSize))
+  );
 
   span::selection {
     color: ${props => props.theme.white};
@@ -77,6 +90,7 @@ const IndexPage = () => (
         <span>( •_•)>⌐■-■ (⌐■_■)</span>
       </Spacer>
       <Timeline />
+      <Skills />
     </Body>
     <Contact />
   </Layout>

@@ -14,13 +14,23 @@ const Slice = styled.div`
   filter: drop-shadow(3px 4px 0px #b87906);
   width: 30rem;
   z-index: 1;
+  transition: all 0.1s ease-in;
+  &:hover {
+    filter: drop-shadow(0px 0px 0px #b87906);
+    transform: translateY(4px);
+  }
 
   div {
-    background: #fb8c00;
+    background-color: #fb8c00;
     color: #222;
     font: bold 32px system-ui;
     padding: 2rem 3rem 2rem 2rem;
     clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0 100%, 0 0);
+    transition: all 0.1s ease-in;
+
+    &:hover {
+      background-color: #fba200;
+    }
   }
 `
 

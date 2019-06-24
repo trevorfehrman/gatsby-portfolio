@@ -11,7 +11,7 @@ const Line = styled.div`
 
 const Timeline = () => {
   return (
-    <div style={{ marginTop: "8rem" }}>
+    <div style={{ marginTop: "8rem", position: "relative" }}>
       <Line />
       {timelineData.map(chapter => (
         <Chapter title={chapter.title} description={chapter.description} />

@@ -47,6 +47,7 @@ const Container = styled.div`
 
   .details {
     display: flex;
+    z-index: 1;
     &:hover {
       transform: scaleY(1);
       width: 95%;
@@ -176,6 +177,7 @@ const Container = styled.div`
 
   .details2 {
     display: flex;
+    z-index: 1;
     &:hover {
       transform: scaleY(1);
       width: 95%;
@@ -305,6 +307,7 @@ const Container = styled.div`
 
   .details3 {
     display: flex;
+    z-index: 1;
     &:hover {
       transform: scaleY(1);
       width: 95%;
@@ -439,7 +442,6 @@ const Card = styled.div`
   width: 100%;
   margin-top: 7rem;
   &:hover {
-    border-bottom: none;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
     border: ${props =>

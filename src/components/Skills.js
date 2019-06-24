@@ -7,7 +7,7 @@ import styled from "styled-components"
 const SkillContainer = styled.div`
   width: 85%;
   margin: 10rem auto 0 auto;
-  padding-bottom: 3rem;
+  padding-bottom: 11rem;
   display: flex;
   justify-content: space-around;
 
@@ -33,7 +33,7 @@ const frontendColors = {
     saturation: 0,
     level: {
       minimum: 60,
-      maximum: 80,
+      maximum: 90,
     },
   },
   title: {
@@ -52,7 +52,7 @@ const backendColors = {
     saturation: 0,
     level: {
       minimum: 60,
-      maximum: 80,
+      maximum: 90,
     },
   },
   title: {
@@ -71,7 +71,7 @@ const otherColors = {
     saturation: 0,
     level: {
       minimum: 60,
-      maximum: 80,
+      maximum: 90,
     },
   },
   title: {

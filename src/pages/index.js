@@ -7,6 +7,7 @@ import SEO from "../components/seo"
 import { Contact } from "../components/contact"
 import { Work } from "../components/work"
 import Timeline from "../components/Timeline"
+import Footer from "../components/Footer"
 import Skills from "../components/Skills"
 import classyFabric from "../../assets/classy-fabric.png"
 
@@ -92,6 +93,7 @@ const IndexPage = () => (
       <Timeline />
       <Skills />
     </Body>
+    <Footer />
     <Contact />
   </Layout>
 )

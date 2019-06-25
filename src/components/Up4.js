@@ -1,5 +1,5 @@
-import React, { Fragment } from "react";
-import up4Splash from '../../assets/up4Splash.png';
+import React, { Fragment } from "react"
+import up4Splash from "../../assets/up4Splash.png"
 
 const Up4 = ({ setUp4Content, up4Content }) => {
   return (
@@ -74,8 +74,8 @@ const Up4 = ({ setUp4Content, up4Content }) => {
                     <p>
                       I and four other developers spent 5 weeks building Up4 to
                       demonstrate the knowledge we'd accrued at Lambda School.
-                      Features include a compatibility algorithm a user
-                      dashboard, and a chat system built from scratch.
+                      Features include a compatibility algorithm, a user
+                      dashboard and a chat system built from scratch.
                     </p>
                     <p>
                       Despite the rigid timeframe we opted into a stack we
@@ -133,14 +133,15 @@ const Up4 = ({ setUp4Content, up4Content }) => {
                       team.
                     </p>
                     <p>
-                      Up4 was a collabrative effort but we each had our niches.
-                      The lion's share of the look and feel of the site is the
-                      result of my work. I also named it.
+                      Up4 was a collabrative effort and we wore a lot of hats,
+                      but we also fell naturally into a niche. The lion's share
+                      of the look and feel of the site is the result of my work.
+                      I also named it.
                     </p>
                     <p>
-                      Very roughtly speaking what this means is my team would figure out
-                      how to feed the data up to the front end at which point I
-                      would figure out what to do with it.
+                      Very roughtly speaking what this means is that my team would
+                      figure out how to feed the data up to the front end at
+                      which point I would figure out what to do with it.
                     </p>
                   </Fragment>
                 )

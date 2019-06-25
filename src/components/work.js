@@ -574,7 +574,7 @@ export const Work = props => {
         <Card quizBaker>
           <StyledImage>
             <img
-              style={{ height: "30rem", marginTop: "1rem" }}
+              style={{ height: "26rem", marginTop: "1rem" }}
               className="logo"
               src={quizBakerLogo}
             />
@@ -605,20 +605,44 @@ export const Work = props => {
         <BombNom />
       </Container>
       <div className="mobile">
-        <a href="https://www.up4.life/" target="_blank">
+        <a
+          style={{
+            display: "flex",
+            placeItems: "center",
+            placeContent: "center",
+          }}
+          href="https://www.up4.life/"
+          target="_blank"
+        >
           <img className="logo" src={up4Logo} />
         </a>
-        <a href="https://www.quiz-baker.com/" target="_blank">
+        <a
+          style={{
+            display: "flex",
+            placeItems: "center",
+            placeContent: "center",
+          }}
+          href="https://www.quiz-baker.com/"
+          target="_blank"
+        >
           <img
-            // style={{ height: "30rem", marginTop: "1rem" }}
+            style={{ transform: "scale(2.7)", marginTop: "8rem" }}
             className="logo"
             src={quizBakerLogo}
           />
         </a>
 
-        <a href="https://github.com/trevorfehrman/partyfood" target="_blank">
+        <a
+          style={{
+            display: "flex",
+            placeItems: "center",
+            placeContent: "center",
+          }}
+          href="https://github.com/trevorfehrman/partyfood"
+          target="_blank"
+        >
           <img
-            style={{ marginTop: "3rem" }}
+            style={{ transform: "scale(1.8)", marginTop: "14rem" }}
             className="logo"
             src={bombNomLogo}
           />

@@ -15,6 +15,7 @@ const Slice = styled.div`
   width: 30rem;
   z-index: 1;
   transition: all 0.1s ease-in;
+  transform: translateX(2.5rem);
   &:hover {
     filter: drop-shadow(0px 0px 0px #b87906);
     transform: translateY(4px);
@@ -49,6 +50,7 @@ const Description = styled.div`
   align-items: center;
   border-top-right-radius: 2rem;
   border-bottom-right-radius: 2rem;
+  transform: translateX(2.5rem);
 
   div {
     position: relative;

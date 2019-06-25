@@ -90,6 +90,7 @@ const Header = styled.div`
 
     &:hover {
       background-color: #f44236;
+      box-shadow: -5px 0px 5px 0px #0000004a;
     }
 
     @media (max-width: 900px) {

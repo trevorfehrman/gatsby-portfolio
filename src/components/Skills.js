@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Fragment } from "react"
 import SkillBar from "react-skillbars"
 import { frontendData, backendData, otherData } from "../utils/skillsData"
 
@@ -98,7 +98,7 @@ const Skills = () => {
   return (
     <SkillContainer>
       {typeof window !== "undefined" && SkillBar && (
-        <div>
+        <Fragment>
           <SkillBar
             style={{ width: "30%" }}
             colors={frontendColors}
@@ -123,7 +123,7 @@ const Skills = () => {
             height={50}
             skills={otherData}
           />
-        </div>
+        </Fragment>
       )}
     </SkillContainer>
   )

@@ -558,50 +558,50 @@ export const Work = props => {
     <ContainerContainer>
       {console.log(up4Content)}
       <Container>
-        <a href="https://www.up4.life/" target="_blank">
-          <Card up4 onClick={() => setWork("up4")}>
-            <StyledImage>
-              <img className="logo" src={up4Logo} />
-            </StyledImage>
+        <Card up4 onClick={() => setWork("up4")}>
+          <StyledImage>
+            <img className="logo" src={up4Logo} />
+          </StyledImage>
+          <a href="https://www.up4.life/" target="_blank">
             <StyledImage>
               <img className="image" src={up4Gif} />
             </StyledImage>
-          </Card>
-        </a>
+          </a>
+        </Card>
         <Up4 up4 setUp4Content={setUp4Content} up4Content={up4Content} />
       </Container>
       <Container>
-        <a href="https://www.quiz-baker.com/" target="_blank">
-          <Card quizBaker>
-            <StyledImage>
-              <img
-                style={{ height: "30rem", marginTop: "1rem" }}
-                className="logo"
-                src={quizBakerLogo}
-              />
-            </StyledImage>
+        <Card quizBaker>
+          <StyledImage>
+            <img
+              style={{ height: "30rem", marginTop: "1rem" }}
+              className="logo"
+              src={quizBakerLogo}
+            />
+          </StyledImage>
+          <a href="https://www.quiz-baker.com/" target="_blank">
             <StyledImage>
               <img className="image" src={quizBakerGif} />
             </StyledImage>
-          </Card>
-        </a>
+          </a>
+        </Card>
         <QuizBaker setUp4Content={setUp4Content} up4Content={up4Content} />
       </Container>
       <Container>
-        <a href="https://github.com/trevorfehrman/partyfood" target="_blank">
-          <Card>
-            <StyledImage>
-              <img
-                style={{ marginTop: "3rem" }}
-                className="logo"
-                src={bombNomLogo}
-              />
-            </StyledImage>
+        <Card>
+          <StyledImage>
+            <img
+              style={{ marginTop: "3rem" }}
+              className="logo"
+              src={bombNomLogo}
+            />
+          </StyledImage>
+          <a href="https://github.com/trevorfehrman/partyfood" target="_blank">
             <StyledImage>
               <img className="image" src={bombNomGif} />
             </StyledImage>
-          </Card>
-        </a>
+          </a>
+        </Card>
         <BombNom />
       </Container>
       <div className="mobile">

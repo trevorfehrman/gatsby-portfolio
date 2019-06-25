@@ -97,7 +97,7 @@ const Skills = () => {
   //   })
   return (
     <SkillContainer>
-      {typeof window !== undefined && SkillBar && (
+      {typeof window !== "undefined" && SkillBar && (
         <div>
           <SkillBar
             style={{ width: "30%" }}

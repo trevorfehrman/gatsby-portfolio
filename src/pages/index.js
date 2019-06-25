@@ -6,6 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { Contact } from "../components/contact"
 import { Work } from "../components/work"
+import { Github } from "../../assets/github"
 import Timeline from "../components/Timeline"
 import Footer from "../components/Footer"
 import Skills from "../components/Skills"
@@ -18,14 +19,45 @@ const Header = styled.div`
   --bg-shade-angle: 80deg;
   font-size: 7rem;
   padding: 1rem 0 2rem 3rem;
+  position: relative;
+
+  @media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+  & > div {
+    @media (max-width: 9000px) {
+      display: flex;
+      flex-direction: column;
+      place-content: center;
+      place-items: center;
+    }
+  }
 
   h1 {
+    width: 90%;
+    @media (max-width: 900px) {
+      font-size: 10rem;
+    }
+
+    @media (max-width: 500px) {
+      font-size: 6rem;
+    }
     /* text-shadow: 0.03em -0.04em #ed65e8, -0.03em 0.04em #f9f32f; */
   }
 
   h4 {
     font-weight: 300;
     margin-left: 4rem;
+    width: 70%;
+    @media (max-width: 900px) {
+      font-size: 8rem;
+    }
+    @media (max-width: 500px) {
+      font-size: 4rem;
+    }
   }
 
   h6 {
@@ -33,6 +65,39 @@ const Header = styled.div`
     font-weight: 300;
     color: ${props => props.theme.white};
     margin-left: 4.2rem;
+    width: 70%;
+    @media (max-width: 900px) {
+      font-size: 6rem;
+      margin-bottom: 3rem;
+    }
+    @media (max-width: 500px) {
+      font-size: 2rem;
+    }
+  }
+
+  .github {
+    height: 100%;
+    background-color: #40a5a6;
+    padding: 3rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f44236;
+    }
+
+    @media (max-width: 900px) {
+      position: static;
+
+      background-color: #40a5a64a;
+    }
   }
 `
 
@@ -75,15 +140,28 @@ const Spacer = styled.div`
     color: ${props => props.theme.white};
     background: ${props => props.theme.red};
   }
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Header>
-      <h1>Trevor Fehrman</h1>
-      <h4>Full Stack Web Developer</h4>
-      <h6>Emphasis on Front End and Design</h6>
+      <div>
+        <h1>Trevor Fehrman</h1>
+        <h4>Full Stack Web Developer</h4>
+        <h6>Emphasis on Front End and Design</h6>
+      </div>
+      <a
+        href="https://github.com/trevorfehrman/"
+        target="_blank"
+        className="github"
+      >
+        <Github />
+      </a>
     </Header>
     <Body>
       <Work />

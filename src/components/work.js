@@ -519,61 +519,111 @@ const Card = styled.div`
     }
   }
 `
+
+const ContainerContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+
+  .mobile {
+    display: none;
+
+    @media (max-width: 900px) {
+      display: flex;
+      flex-direction: column;
+      place-content: center;
+      place-items: center;
+      img {
+        width: 70%;
+        margin: 5rem 0;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    place-items: center;
+
+    ${Container} {
+      display: none;
+    }
+  }
+`
 export const Work = props => {
   const [up4Content, setUp4Content] = useState("Picture")
   const [work, setWork] = useState("")
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        position: "relative",
-        width: "85%",
-        margin: "0 auto",
-      }}
-    >
+    <ContainerContainer>
       {console.log(up4Content)}
       <Container>
-        <Card up4 onClick={() => setWork("up4")}>
-          <StyledImage>
-            <img className="logo" src={up4Logo} />
-          </StyledImage>
-          <StyledImage>
-            <img className="image" src={up4Gif} />
-          </StyledImage>
-        </Card>
+        <a href="https://www.up4.life/" target="_blank">
+          <Card up4 onClick={() => setWork("up4")}>
+            <StyledImage>
+              <img className="logo" src={up4Logo} />
+            </StyledImage>
+            <StyledImage>
+              <img className="image" src={up4Gif} />
+            </StyledImage>
+          </Card>
+        </a>
         <Up4 up4 setUp4Content={setUp4Content} up4Content={up4Content} />
       </Container>
       <Container>
-        <Card quizBaker>
-          <StyledImage>
-            <img
-              style={{ height: "30rem", marginTop: "1rem" }}
-              className="logo"
-              src={quizBakerLogo}
-            />
-          </StyledImage>
-          <StyledImage>
-            <img className="image" src={quizBakerGif} />
-          </StyledImage>
-        </Card>
+        <a href="https://www.quiz-baker.com/" target="_blank">
+          <Card quizBaker>
+            <StyledImage>
+              <img
+                style={{ height: "30rem", marginTop: "1rem" }}
+                className="logo"
+                src={quizBakerLogo}
+              />
+            </StyledImage>
+            <StyledImage>
+              <img className="image" src={quizBakerGif} />
+            </StyledImage>
+          </Card>
+        </a>
         <QuizBaker setUp4Content={setUp4Content} up4Content={up4Content} />
       </Container>
       <Container>
-        <Card>
-          <StyledImage>
-            <img
-              style={{ marginTop: "3rem" }}
-              className="logo"
-              src={bombNomLogo}
-            />
-          </StyledImage>
-          <StyledImage>
-            <img className="image" src={bombNomGif} />
-          </StyledImage>
-        </Card>
+        <a href="https://github.com/trevorfehrman/partyfood" target="_blank">
+          <Card>
+            <StyledImage>
+              <img
+                style={{ marginTop: "3rem" }}
+                className="logo"
+                src={bombNomLogo}
+              />
+            </StyledImage>
+            <StyledImage>
+              <img className="image" src={bombNomGif} />
+            </StyledImage>
+          </Card>
+        </a>
         <BombNom />
       </Container>
-    </div>
+      <div className="mobile">
+        <a href="https://www.up4.life/" target="_blank">
+          <img className="logo" src={up4Logo} />
+        </a>
+        <a href="https://www.quiz-baker.com/" target="_blank">
+          <img
+            // style={{ height: "30rem", marginTop: "1rem" }}
+            className="logo"
+            src={quizBakerLogo}
+          />
+        </a>
+
+        <a href="https://github.com/trevorfehrman/partyfood" target="_blank">
+          <img
+            style={{ marginTop: "3rem" }}
+            className="logo"
+            src={bombNomLogo}
+          />
+        </a>
+      </div>
+    </ContainerContainer>
   )
 }

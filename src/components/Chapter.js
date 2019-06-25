@@ -27,6 +27,9 @@ const Slice = styled.div`
     padding: 2rem 3rem 2rem 2rem;
     clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0 100%, 0 0);
     transition: all 0.1s ease-in;
+    @media (max-width: 900px) {
+      font-size: 2rem;
+    }
 
     &:hover {
       background-color: #fba200;
@@ -52,6 +55,9 @@ const Description = styled.div`
     bottom: 4px;
     font-size: 2.3rem;
     font-weight: 200;
+    @media (max-width: 900px) {
+      font-size: 1.5rem;
+    }
   }
 `
 const Chapter = ({ title, description }) => {

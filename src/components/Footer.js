@@ -6,11 +6,7 @@ const FooterContainer = styled.div`
   height: 18rem;
 `
 const Footer = () => {
-  return (
-    <FooterContainer>
-      <h1>hi</h1>
-    </FooterContainer>
-  )
+  return <FooterContainer />
 }
 
 export default Footer

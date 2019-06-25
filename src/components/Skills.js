@@ -11,8 +11,15 @@ const SkillContainer = styled.div`
   display: flex;
   justify-content: space-around;
 
+  @media (max-width: 900px) {
+    flex-direction: column;
+  }
+
   & > div {
     width: 30%;
+    @media (max-width: 900px) {
+      width: 100%;
+    }
   }
 
   .skillbar {

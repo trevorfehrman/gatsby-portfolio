@@ -1,9 +1,9 @@
-import React from "react";
-import styled, {keyframes} from "styled-components";
+import React from "react"
+import styled, { keyframes } from "styled-components"
 
-import {Twitter} from "../../assets/twitter.js";
-import {Send} from "../../assets/send.js";
-import {LinkedIn} from "../../assets/linkedin.js";
+import { Twitter } from "../../assets/twitter.js"
+import { Send } from "../../assets/send.js"
+import { LinkedIn } from "../../assets/linkedin.js"
 
 const ContactBox = styled.div`
   position: fixed;
@@ -18,8 +18,8 @@ const ContactBox = styled.div`
   padding: 3.5rem 2rem;
   border-bottom-left-radius: 7rem;
   border-top-right-radius: 7rem;
-  transition: width 0.4s ease-out, box-shadow .2s ease-out .4s,
-    transform .2s ease-out .4s;
+  transition: width 0.4s ease-out, box-shadow 0.2s ease-out 0.4s,
+    transform 0.2s ease-out 0.4s;
   padding-top: -1rem;
   overflow: hidden;
   display: flex;
@@ -53,6 +53,10 @@ const ContactBox = styled.div`
     user-select: all;
     white-space: nowrap;
     transition: all 0.2s ease-in;
+    a:hover {
+      text-shadow: 2px 2px 8px #000000;
+      transform: scale(1.1);
+    }
   }
 
   /* // .details--expanded {
@@ -75,39 +79,39 @@ const ContactBox = styled.div`
     flex-direction: column;
     justify-content: space-between;
   }
-`;
+`
 
 export const Contact = () => {
   return (
     <ContactBox>
-      <div className='icons'>
+      <div className="icons">
         <Twitter />
         <LinkedIn />
         <Send />
       </div>
-      <div className='contact details'>
+      <div className="contact details">
         <a
-          className='details handle'
-          href='https://twitter.com/TrevorFehrman'
-          target='_blank'
-          rel='noopener noreferrer'
+          className="details handle"
+          href="https://twitter.com/TrevorFehrman"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           @TrevorFehrman
         </a>
 
         <a
-          className='details handle'
-          href='https://www.linkedin.com/in/trevor-fehrman-0042656/'
-          target='_blank'
-          rel='noopener noreferrer'
+          className="details handle"
+          href="https://www.linkedin.com/in/trevor-fehrman-0042656/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Trevor Fehrman
         </a>
 
-        <a className='details handle' href='mailto:trevorfehrman@gmail.com'>
+        <a className="details handle" href="mailto:trevorfehrman@gmail.com">
           trevorfehrman@gmail.com
         </a>
       </div>
     </ContactBox>
-  );
-};
+  )
+}

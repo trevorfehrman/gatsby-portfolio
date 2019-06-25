@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import SkillBar from "react-skillbars"
 import { frontendData, backendData, otherData } from "../utils/skillsData"
 
@@ -92,6 +92,9 @@ const otherColors = {
 }
 
 const Skills = () => {
+//   useEffect(() => {
+//     import SkillBar from "react-skillbars"
+//   })
   return (
     <SkillContainer>
       <SkillBar

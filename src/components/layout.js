@@ -144,7 +144,7 @@ const Layout = ({ children }) => (
           <Fragment>
             <GlobalStyle />
 
-            <main style={{ positoin: "relative" }}>{children}</main>
+            <main style={{ position: "relative" }}>{children}</main>
           </Fragment>
         </ThemeProvider>
       </Fragment>

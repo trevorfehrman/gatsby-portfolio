@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React from "react"
 import SkillBar from "react-skillbars"
 import { frontendData, backendData, otherData } from "../utils/skillsData"
 
@@ -92,35 +92,39 @@ const otherColors = {
 }
 
 const Skills = () => {
-//   useEffect(() => {
-//     import SkillBar from "react-skillbars"
-//   })
+  //   useEffect(() => {
+  //     import SkillBar from "react-skillbars"
+  //   })
   return (
     <SkillContainer>
-      <SkillBar
-        style={{ width: "30%" }}
-        colors={frontendColors}
-        animationDelay={1}
-        animationDuration={1000}
-        height={50}
-        skills={frontendData}
-      />
-      <SkillBar
-        style={{ width: "30%" }}
-        colors={backendColors}
-        animationDelay={1}
-        animationDuration={1000}
-        height={50}
-        skills={backendData}
-      />
-      <SkillBar
-        style={{ width: "30%" }}
-        colors={otherColors}
-        animationDelay={1}
-        animationDuration={1000}
-        height={50}
-        skills={otherData}
-      />
+      {typeof window !== undefined && SkillBar && (
+        <div>
+          <SkillBar
+            style={{ width: "30%" }}
+            colors={frontendColors}
+            animationDelay={1}
+            animationDuration={1000}
+            height={50}
+            skills={frontendData}
+          />
+          <SkillBar
+            style={{ width: "30%" }}
+            colors={backendColors}
+            animationDelay={1}
+            animationDuration={1000}
+            height={50}
+            skills={backendData}
+          />
+          <SkillBar
+            style={{ width: "30%" }}
+            colors={otherColors}
+            animationDelay={1}
+            animationDuration={1000}
+            height={50}
+            skills={otherData}
+          />
+        </div>
+      )}
     </SkillContainer>
   )
 }

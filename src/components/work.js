@@ -6,7 +6,7 @@ import BombNom from "./BombNom"
 
 import up4Gif from "../../assets/events.gif"
 import up4Logo from "../../assets/up4Logo.png"
-import quizBakerLogo from "../../assets/quizBakerLogo.svg"
+import quizBakerLogo from "../../assets/quizBakerLogo2.svg"
 import quizBakerGif from "../../assets/quizBaker.gif"
 import bombNomLogo from "../../assets/bombNomLogo.svg"
 import bombNomGif from "../../assets/bombNomGif.gif"

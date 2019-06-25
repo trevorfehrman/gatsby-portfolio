@@ -101,7 +101,7 @@ export const Contact = () => {
 
         <a
           className="details handle"
-          href="https://www.linkedin.com/in/trevor-fehrman-0042656/"
+          href="https://www.linkedin.com/in/trevor-fehrman-57985b15a/"
           target="_blank"
           rel="noopener noreferrer"
         >

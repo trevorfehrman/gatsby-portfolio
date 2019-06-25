@@ -18,7 +18,7 @@ const Slice = styled.div`
   transform: translateX(2.5rem);
   &:hover {
     filter: drop-shadow(0px 0px 0px #b87906);
-    transform: translateY(4px);
+    transform: translate3d(24px, 4px, 0);
   }
 
   div {

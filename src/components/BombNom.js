@@ -79,7 +79,7 @@ const BombNom = () => {
                     <h2>The Project</h2>
                     <p>
                       Bomb-Nom is a party planning app. Users can create
-                      parties, send invites, and create a registry for what the
+                      parties, send invites and create a registry for what the
                       host needs their guests to bring.
                     </p>
                     <p>
@@ -114,10 +114,9 @@ const BombNom = () => {
                     </p>
                     <p>
                       Grid is very powerful but the skill floor is higher than
-                      alternatives. You can get very responsive layouts with a
-                      single line of CSS, but that line has a lot to unpack.
-                      Masking the party attendee grid took considerable
-                      effort.
+                      alternatives. You can get robust, responsive layouts with
+                      a single line of CSS, but that line has a lot to unpack.
+                      Masking the party attendee grid took considerable effort.
                     </p>
 
                     <p>

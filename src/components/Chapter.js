@@ -60,6 +60,9 @@ const Description = styled.div`
     @media (max-width: 900px) {
       font-size: 1.5rem;
     }
+    @media (max-width: 400px) {
+      font-size: 1rem;
+    }
   }
 `
 const Chapter = ({ title, description }) => {

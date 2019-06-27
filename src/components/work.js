@@ -536,7 +536,7 @@ const ContainerContainer = styled.div`
       place-content: center;
       place-items: center;
       img {
-        width: 70%;
+        width: 50%;
         margin: 5rem 0;
       }
     }

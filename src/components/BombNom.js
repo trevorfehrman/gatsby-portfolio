@@ -108,7 +108,7 @@ const BombNom = () => {
                   <Fragment>
                     <h2>What I Struggled with</h2>
                     <p>
-                      I've had a fair ammount of practice with Flexbox layouts
+                      I've had a fair amount of practice with Flexbox layouts
                       but this has been my first real attempt to use the CSS
                       Grid module.
                     </p>

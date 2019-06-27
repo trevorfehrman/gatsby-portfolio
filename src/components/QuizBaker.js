@@ -80,7 +80,7 @@ const QuizBaker = () => {
                     <h2>The Project</h2>
                     <p>
                       I built Quiz-Baker with with a partner while we were
-                      teacher's assistants in Lambda School. We wanted to
+                      teachers' assistants in Lambda School. We wanted to
                       provide an API on top of which the more ambitious students
                       we were overseeing could build a project during an
                       extended winter break.
@@ -145,7 +145,7 @@ const QuizBaker = () => {
                       largely finished.
                     </p>
                     <p>
-                      As in Up4 I gave Quiz-Baker its look at feel. I came up
+                      As in Up4 I gave Quiz-Baker its look and feel. I came up
                       with the name, the color scheme, the design motifs and
                       built most of the custom components.
                     </p>

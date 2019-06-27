@@ -107,7 +107,7 @@ const Up4 = ({ setUp4Content, up4Content }) => {
                     </p>
                     <p>
                       Because our project was so ambitious we ran into several
-                      performace issues. We migrated our backend twice to more
+                      performance issues. We migrated our backend twice to more
                       powerful options. We also isolated some extremely hot code
                       and brought our time-to-interactive down to a fraction of
                       what it was prior.
